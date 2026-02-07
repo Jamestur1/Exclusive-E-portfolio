@@ -26,6 +26,7 @@ function contact(event) {
   let ismodalOpen = false;
   function toggleModal() {
     if (ismodalOpen) {
+        ismodalOpen = false;
         return document.body.classList.remove("modal--open");
     }
     ismodalOpen = !ismodalOpen;

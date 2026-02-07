@@ -19,6 +19,7 @@
    })();
    </script>
   </head>
+
   <body>
     <section id="landing-page">
       <nav>
@@ -40,7 +41,7 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect__black"
@@ -65,7 +66,7 @@
             <b class="orange">frontend software engineer</b> and web developer.
             I love creating beautiful, functional, and user-friendly websites
             and applications. <br />Here's a bit more
-            <b class="orange">about me</b>.
+            <b class="orange click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a
@@ -129,6 +130,7 @@
           </div>
           </div>
         <div class="modal__half modal__contact">
+           <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
          <h3 class="modal__title modal__title--contact">
           Let's have a chat.
           </h3>
@@ -159,7 +161,6 @@
             Thanks for reaching out! I'll get back to you as soon as I can!
           </div>
         </div>
-        <i class="fa-solid fa-xmark modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
@@ -298,11 +299,11 @@
              ">
               Linkedin
              </a>
-             <a href="#" class="
+             <a href="#" class=" 
              footer__social--link
              link__hover-effect
              link__hover-effect--white
-             ">
+             " onclick="toggleModal()">
               Contact
              </a>
              <a href="#" class="
