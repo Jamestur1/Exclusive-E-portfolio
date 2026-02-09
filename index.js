@@ -2,6 +2,34 @@
 // service_f5mumen
 // 7XGCy_rpvXcyWBWD0
 
+let ismodalOpen = false;
+let contrastToggle = false;
+const scaleFactor = 1 / 20;
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+
+    for (let i = 0; i < shapes.length ++i) {
+        const isOdd = i % 2 !== 0;
+        const boolInt= isOdd ? -1 : 1;
+       shapes[i].styles.transform = `translate(${x * boolInt }px, ${y * boolInt}px)`
+    }
+}
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList += " dark-theme"
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+    
+}
+
+
 function contact(event) {
     event.preventDefault();
      const loading = document.querySelector(".modal__overlay--loading");
@@ -23,7 +51,7 @@ function contact(event) {
         })
   }
 
-  let ismodalOpen = false;
+  
   function toggleModal() {
     if (ismodalOpen) {
         ismodalOpen = false;

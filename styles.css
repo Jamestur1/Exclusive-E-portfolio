@@ -25,6 +25,7 @@ button {
 
 section {
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 input, textarea {
@@ -139,6 +140,37 @@ nav,
     transition: all 400ms;
 }
 
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header--para
+ {
+    color:white;
+}
+
+.dark-theme section {
+    background-color: #242424;
+}
+
+.dark-theme #personal__logo {
+    filter: none;
+}
+
+.dark-theme .scroll__icon {
+    border-color: WHITE;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect__black:after {
+    background-color: white;
+}
+
+.dark-theme .mail__btn {
+    background-color: white;
+    color: #242424;
+}
 
 /* Landing Page */
 
@@ -288,7 +320,7 @@ nav {
     display: flex;
     visibility: hidden;
     z-index: -1;
-    transition: visibility 1s, z-index 1s, box-shadow 0.5s, ease;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
 .modal--open .modal {
@@ -573,4 +605,47 @@ footer {
 .footer__social--link,
 .footer__copyright {
     color: white;
+}
+
+/* Shapes */
+
+.shape {
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
 }
